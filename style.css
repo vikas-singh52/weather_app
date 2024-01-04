@@ -1,0 +1,270 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+}
+body {
+  background-image: linear-gradient(#2e335a 100%, #1c1b33 100%);
+  color: white;
+}
+
+.container {
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+#main-heading {
+  margin: 30px auto 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 700px;
+  font-family: Inter;
+}
+.search-container {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+.search-container .span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-container .span span {
+}
+.search-container input {
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #2e335a 6%, #1c1b33 26%);
+  border: none;
+}
+#search-btn {
+  margin-left: 20px;
+  padding: 8px;
+  background-color: rgba(74, 57, 127, 0.7);
+  border-radius: 5px;
+  color: white;
+
+  font-family: Inter;
+  font-size: 15px;
+}
+.weather-container {
+  padding: 20px;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 3fr));
+  gap: 30px;
+}
+/* dynamic  card */
+.card {
+  border-radius: 10px;
+  padding: 20px;
+  background-image: linear-gradient(
+    to right,
+    rgba(89, 54, 180, 1),
+    rgba(54, 42, 132, 1)
+  );
+  color: white;
+}
+#card-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#card-div #weather {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-right: 5px;
+  font-family: SF Pro Display;
+}
+
+#imgDiv {
+  display: flex;
+  justify-content: space-between;
+}
+#temp {
+  margin: 30px 10px 10px 3px;
+  font-family: SF Pro Display;
+  font-size: 64px;
+  font-weight: 400px;
+}
+#fade {
+  margin-top: 5px;
+  font-family: SF Pro Display;
+  color: grey;
+  font-size: 18px;
+}
+#city-style {
+  margin-top: 5px;
+  font-size: 24px;
+  font-weight: 400px;
+  font-family: SF Pro Display;
+}
+.hidden {
+  display: none;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+  background-color: red;
+  border-radius: 10px;
+  border: none;
+}
+/* responsive */
+@media screen and (max-width: 435px) {
+  #main-heading {
+    font-size: 20px;
+  }
+  .container {
+    width: 100%;
+  }
+  .search-container {
+    flex-direction: column;
+  }
+  .search-container input {
+    margin-top: 15px;
+  }
+  #search-btn {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+  }
+  #temp {
+    margin: 30px 10px 10px 3px;
+    font-family: SF Pro Display;
+    font-size: 50px;
+    font-weight: 400px;
+  }
+  #fade {
+    margin-top: 5px;
+    font-family: SF Pro Display;
+    color: grey;
+    font-size: 15px;
+  }
+  #city-style {
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 400px;
+    font-family: SF Pro Display;
+  }
+  #imgDiv img {
+    width: 100px;
+    height: 80px;
+  }
+
+  .weather-container {
+    padding: 10px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 435px) and (max-width: 576px) {
+  #main-heading {
+    font-size: 40px;
+  }
+  .container {
+    width: 100%;
+  }
+  .search-container {
+    flex-direction: column;
+  }
+  .search-container input {
+    margin-top: 15px;
+  }
+  #search-btn {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+  }
+  .weather-container {
+    padding: 10px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  #main-heading {
+    font-size: 50px;
+  }
+  .weather-container {
+    padding: 10px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    gap: 30px;
+  }
+  #temp {
+    margin: 10px 5px 5px 3px;
+    font-family: SF Pro Display;
+    font-size: 30px;
+    font-weight: 400px;
+  }
+  #fade {
+    margin-top: 5px;
+    font-family: SF Pro Display;
+    color: grey;
+    font-size: 15px;
+  }
+  #city-style {
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 400px;
+    font-family: SF Pro Display;
+  }
+  #imgDiv img {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #main-heading {
+    font-size: 50px;
+  }
+  .weather-container {
+    padding: 20px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+    gap: 30px;
+  }
+  #temp {
+    margin: 10px 5px 5px 3px;
+    font-family: SF Pro Display;
+    font-size: 30px;
+    font-weight: 400px;
+  }
+  #fade {
+    margin-top: 5px;
+    font-family: SF Pro Display;
+    color: grey;
+    font-size: 15px;
+  }
+  #city-style {
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 400px;
+    font-family: SF Pro Display;
+  }
+  #imgDiv img {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+  #main-heading {
+    font-size: 64px;
+  }
+}
